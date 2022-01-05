@@ -34,14 +34,9 @@ class ConfirmActivity : AppCompatActivity() {
         if (result.resultCode == Activity.RESULT_OK){
             val data:Intent? = result.data
             val result = data!!.getStringExtra("result")
-            if (result.toString() == "success") {
-                val intent = Intent()
-                intent.putExtra("result", result.toString())
-                setResult(Activity.RESULT_OK, intent)
-                finish()
-            } else if (result.toString() == "fail") {
-                Toast.makeText(this, "Fail in confirm Activity", Toast.LENGTH_SHORT).show()
-            }
+            intent.putExtra("result", result.toString())
+            setResult(Activity.RESULT_OK, intent)
+            finish()
         }
     }
 

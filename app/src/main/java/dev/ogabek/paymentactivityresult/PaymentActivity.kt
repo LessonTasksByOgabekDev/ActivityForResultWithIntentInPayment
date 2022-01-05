@@ -37,8 +37,6 @@ class PaymentActivity : AppCompatActivity() {
             val result = data!!.getStringExtra("result")
             if (result.toString() == "success") {
                 finish()
-            } else if (result.toString() == "fail") {
-                Toast.makeText(this, "Fail in Payment Activity", Toast.LENGTH_SHORT).show()
             }
         }
     }
